@@ -1,0 +1,10 @@
+^G:\CODE\BUILD\CMAKEFILES\16397AB4B351875859D1F272930FB4AF\GENERATE.STAMP.RULE
+setlocal
+"E:\Program Files\CMake\bin\cmake.exe" "-SG:/code/c/hello world" -BG:/code/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file G:/code/build/HelloWorldProject.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

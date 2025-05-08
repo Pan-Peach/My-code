@@ -1,0 +1,10 @@
+^G:\CODE\C\HELLO WORLD\CMAKELISTS.TXT
+setlocal
+"E:\Program Files\CMake\bin\cmake.exe" "-SG:/code/c/hello world" -BG:/code/build --check-stamp-file G:/code/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

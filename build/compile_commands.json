@@ -1,0 +1,14 @@
+[
+{
+  "directory": "G:/code/build",
+  "command": "E:\\MinGW\\mingw64\\bin\\gcc.exe   -g -std=gnu11 -o CMakeFiles\\HelloWorldExecutable.dir\\test.c.obj -c \"G:\\code\\c\\hello world\\test.c\"",
+  "file": "G:/code/c/hello world/test.c",
+  "output": "CMakeFiles/HelloWorldExecutable.dir/test.c.obj"
+},
+{
+  "directory": "G:/code/build",
+  "command": "E:\\MinGW\\mingw64\\bin\\gcc.exe   -g -std=gnu11 -o CMakeFiles\\HelloWorldExecutable.dir\\hello_world.c.obj -c \"G:\\code\\c\\hello world\\hello_world.c\"",
+  "file": "G:/code/c/hello world/hello_world.c",
+  "output": "CMakeFiles/HelloWorldExecutable.dir/hello_world.c.obj"
+}
+]

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "G:/code/c/vcpkgtest/build",
+  "command": "E:\\MinGW\\MINGW6~1.0\\bin\\gcc.exe -DCK_DLL_EXP=_declspec(dllimport) @CMakeFiles/main.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\main.dir\\main.c.obj -c G:\\code\\c\\vcpkgtest\\main.c",
+  "file": "G:/code/c/vcpkgtest/main.c",
+  "output": "CMakeFiles/main.dir/main.c.obj"
+},
+{
+  "directory": "G:/code/c/vcpkgtest/build",
+  "command": "E:\\MinGW\\MINGW6~1.0\\bin\\gcc.exe -DCK_DLL_EXP=_declspec(dllimport) @CMakeFiles/test_main.dir/includes_C.rsp -g -std=gnu11 -o CMakeFiles\\test_main.dir\\test_main.c.obj -c G:\\code\\c\\vcpkgtest\\test_main.c",
+  "file": "G:/code/c/vcpkgtest/test_main.c",
+  "output": "CMakeFiles/test_main.dir/test_main.c.obj"
+}
+]

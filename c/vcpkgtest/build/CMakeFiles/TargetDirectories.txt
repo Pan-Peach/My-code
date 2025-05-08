@@ -1,0 +1,5 @@
+G:/code/c/vcpkgtest/build/CMakeFiles/main.dir
+G:/code/c/vcpkgtest/build/CMakeFiles/test_main.dir
+G:/code/c/vcpkgtest/build/CMakeFiles/test.dir
+G:/code/c/vcpkgtest/build/CMakeFiles/edit_cache.dir
+G:/code/c/vcpkgtest/build/CMakeFiles/rebuild_cache.dir

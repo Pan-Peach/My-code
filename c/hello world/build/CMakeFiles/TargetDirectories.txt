@@ -1,0 +1,3 @@
+G:/code/c/hello world/build/CMakeFiles/HelloWorldExecutable.dir
+G:/code/c/hello world/build/CMakeFiles/edit_cache.dir
+G:/code/c/hello world/build/CMakeFiles/rebuild_cache.dir

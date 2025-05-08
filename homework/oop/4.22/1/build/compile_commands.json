@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/jlu/Desktop/oop/build",
+  "command": "C:\\PROGRA~1\\CodeBlocks\\MinGW\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\1.dir\\MyMain.cpp.obj -c C:\\Users\\jlu\\Desktop\\oop\\MyMain.cpp",
+  "file": "C:/Users/jlu/Desktop/oop/MyMain.cpp",
+  "output": "CMakeFiles/1.dir/MyMain.cpp.obj"
+},
+{
+  "directory": "C:/Users/jlu/Desktop/oop/build",
+  "command": "C:\\PROGRA~1\\CodeBlocks\\MinGW\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\1.dir\\func1.cpp.obj -c C:\\Users\\jlu\\Desktop\\oop\\func1.cpp",
+  "file": "C:/Users/jlu/Desktop/oop/func1.cpp",
+  "output": "CMakeFiles/1.dir/func1.cpp.obj"
+},
+{
+  "directory": "C:/Users/jlu/Desktop/oop/build",
+  "command": "C:\\PROGRA~1\\CodeBlocks\\MinGW\\bin\\g++.exe   -g -std=gnu++17 -o CMakeFiles\\1.dir\\func2.cpp.obj -c C:\\Users\\jlu\\Desktop\\oop\\func2.cpp",
+  "file": "C:/Users/jlu/Desktop/oop/func2.cpp",
+  "output": "CMakeFiles/1.dir/func2.cpp.obj"
+}
+]

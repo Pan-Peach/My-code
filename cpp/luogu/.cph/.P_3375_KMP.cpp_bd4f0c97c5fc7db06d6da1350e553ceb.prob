@@ -1,0 +1,1 @@
+{"name":"Local: P_3375_KMP","url":"g:\\code\\c++\\luogu\\P_3375_KMP.cpp","tests":[{"id":1736860860304,"input":"ABABABC\nABA","output":"1\n3\n0 0 1 "},{"id":1736861782459,"input":"CEBDAEEAACEBDAE\nEBDAE","output":"2\n11\n0 0 0 0 1 "}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"g:\\code\\c++\\luogu\\P_3375_KMP.cpp","group":"local","local":true}
