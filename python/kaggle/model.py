@@ -158,7 +158,7 @@ def train_model(net,loss,num_epcoh,train_iter, valid_iter, trainer):
         net.train()
     for epoch in range(num_epcoh):
         n = 0
-        # print(f'epoch{epoch+1}')
+        print(f'epoch{epoch+1}')
         for X,y in train_iter:
             trainer.zero_grad()
             n += 1
@@ -354,8 +354,9 @@ if  __name__ =='__main__':
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # device = 'cpu'
     print(f"Using device: {device}")
-    train_path = 'train.csv'
-    test_path = 'test.csv'
+    os.chdir(os.path.dirname(os.path.abspath(__file__)))
+    train_path = './train.csv'
+    test_path = './test.csv'
     batch_size = 256
     train_dataset, test_dataset = load_data(train_path, test_path, device)
     print("load complete")
@@ -368,7 +369,7 @@ if  __name__ =='__main__':
     # loss = log_rmse
     loss = nn.MSELoss()
     #loss = combine_loss
-    num_epoch = 50
+    num_epoch = 10
     net = nn.Sequential(
         nn.Linear(num_input,n_hidden1),
         nn.LeakyReLU(),
