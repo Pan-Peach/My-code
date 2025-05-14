@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/ExpressManager.dir/src/Manager.cpp.o CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.o CMakeFiles/ExpressManager.dir/src/User.cpp.o CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o CMakeFiles/ExpressManager.dir/src/main.cpp.o -o ExpressManager 
+/usr/bin/g++ -g CMakeFiles/ExpressManager.dir/src/Package.cpp.o CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.o CMakeFiles/ExpressManager.dir/src/User.cpp.o CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o CMakeFiles/ExpressManager.dir/src/main.cpp.o -o ExpressManager 

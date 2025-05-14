@@ -31,6 +31,9 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
+# Produce verbose output by default.
+VERBOSE = 1
+
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -129,29 +132,29 @@ ExpressManager/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/build
 .PHONY : ExpressManager/fast
 
-src/Manager.o: src/Manager.cpp.o
-.PHONY : src/Manager.o
+src/Package.o: src/Package.cpp.o
+.PHONY : src/Package.o
 
 # target to build an object file
-src/Manager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/Manager.cpp.o
-.PHONY : src/Manager.cpp.o
+src/Package.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/Package.cpp.o
+.PHONY : src/Package.cpp.o
 
-src/Manager.i: src/Manager.cpp.i
-.PHONY : src/Manager.i
+src/Package.i: src/Package.cpp.i
+.PHONY : src/Package.i
 
 # target to preprocess a source file
-src/Manager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/Manager.cpp.i
-.PHONY : src/Manager.cpp.i
+src/Package.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/Package.cpp.i
+.PHONY : src/Package.cpp.i
 
-src/Manager.s: src/Manager.cpp.s
-.PHONY : src/Manager.s
+src/Package.s: src/Package.cpp.s
+.PHONY : src/Package.s
 
 # target to generate assembly for a file
-src/Manager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/Manager.cpp.s
-.PHONY : src/Manager.cpp.s
+src/Package.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/Package.cpp.s
+.PHONY : src/Package.cpp.s
 
 src/PackageManager.o: src/PackageManager.cpp.o
 .PHONY : src/PackageManager.o
@@ -258,9 +261,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ExpressManager"
-	@echo "... src/Manager.o"
-	@echo "... src/Manager.i"
-	@echo "... src/Manager.s"
+	@echo "... src/Package.o"
+	@echo "... src/Package.i"
+	@echo "... src/Package.s"
 	@echo "... src/PackageManager.o"
 	@echo "... src/PackageManager.i"
 	@echo "... src/PackageManager.s"

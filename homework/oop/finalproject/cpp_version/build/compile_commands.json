@@ -1,0 +1,27 @@
+[
+{
+  "directory": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build",
+  "command": "/usr/bin/g++  -I/home/panpeach/My-code/homework/oop/finalproject/cpp_version/include -g -std=gnu++17 -o CMakeFiles/ExpressManager.dir/src/Package.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/Package.cpp",
+  "file": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/Package.cpp"
+},
+{
+  "directory": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build",
+  "command": "/usr/bin/g++  -I/home/panpeach/My-code/homework/oop/finalproject/cpp_version/include -g -std=gnu++17 -o CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/PackageManager.cpp",
+  "file": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/PackageManager.cpp"
+},
+{
+  "directory": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build",
+  "command": "/usr/bin/g++  -I/home/panpeach/My-code/homework/oop/finalproject/cpp_version/include -g -std=gnu++17 -o CMakeFiles/ExpressManager.dir/src/User.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/User.cpp",
+  "file": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/User.cpp"
+},
+{
+  "directory": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build",
+  "command": "/usr/bin/g++  -I/home/panpeach/My-code/homework/oop/finalproject/cpp_version/include -g -std=gnu++17 -o CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/WorkerManager.cpp",
+  "file": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/WorkerManager.cpp"
+},
+{
+  "directory": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build",
+  "command": "/usr/bin/g++  -I/home/panpeach/My-code/homework/oop/finalproject/cpp_version/include -g -std=gnu++17 -o CMakeFiles/ExpressManager.dir/src/main.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/main.cpp",
+  "file": "/home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/main.cpp"
+}
+]

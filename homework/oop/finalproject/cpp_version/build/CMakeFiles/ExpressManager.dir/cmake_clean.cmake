@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/ExpressManager.dir/src/Manager.cpp.o"
-  "CMakeFiles/ExpressManager.dir/src/Manager.cpp.o.d"
+  "CMakeFiles/ExpressManager.dir/src/Package.cpp.o"
+  "CMakeFiles/ExpressManager.dir/src/Package.cpp.o.d"
   "CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.o"
   "CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.o.d"
   "CMakeFiles/ExpressManager.dir/src/User.cpp.o"
