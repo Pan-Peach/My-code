@@ -13,6 +13,10 @@ file(GLOB SOURCES
 
 file(GLOB HEADERS 
     "${PROJECT_SOURCE_DIR}/include/*.h"
+    "${PROJECT_SOURCE_DIR}/include/*.inl"
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
+
+set(CMAKE_VERBOSE_MAKEFILE ON)
+set(CMAKE_BUILD_TYPE Debug)

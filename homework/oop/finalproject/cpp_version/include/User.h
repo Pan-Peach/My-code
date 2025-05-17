@@ -1,22 +1,26 @@
 #pragma once
 #include <string>
+#include "Item.h"
 
 using namespace std;
 
-class User {
+class User:public Item {
 protected:
     string account;
     string password;
-    int id=0;
 public:
-    virtual void serialize(FILE* file) = 0;
-    virtual void deserialize(FILE* file) = 0;
+    virtual string serialize() = 0;
+    virtual void deserialize(string line) = 0;
 
     User() = default;
     User(const string& acc, const string& pwd) : account(acc), password(pwd) {}
     virtual ~User() = default;
-    virtual void display() = 0;
+    virtual void display() const = 0;
+    using Item::getId;
+    using Item::setId;
 };
+
+
 
 class Admin : public User {
 
@@ -46,14 +50,17 @@ class Worker : public User {
 private:
     
 public:
-    void serialize(FILE* file) override ;
-    void deserialize(FILE* file) override ;
+    string serialize() override ;
+    void deserialize(string line) override ;
 
     Worker() = default;
     Worker(const string& acc, const string& pwd) : User(acc, pwd) {};
     ~Worker() = default;
 
-    void display() override ;
+    void display() const override ;
+
+    using Item::getId;
+    using Item::setId;
 
     void RecievePackage(int id) ;
     void SendPackage(int id) ;

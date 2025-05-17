@@ -4,7 +4,5 @@
 #include <memory>
 #include "Package.h"
 #include "Manager.h"
+using namespace std;
 
-class ContianedPackageManager : public Manager<ContainedPackage> {
-
-};

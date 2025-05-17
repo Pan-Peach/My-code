@@ -1,34 +1,30 @@
 #pragma once
 #include <string>
 #include <ctime>
+#include "Item.h"
 
 using namespace std;
 
 class Container; // 前向声明
 
-class Package {
+class Package:public Item {
 protected:
     float weight;
     float volume;
     string code;
-    int id;
     string company;
     int outAddress;
     int inAddress;
     time_t timestamp;
 
 public:
-    Package(float w, float v);
-    Package(float w, float v, const string& c, const int& id, const string& company, int outAddr, int inAddr);
+    Package() = default;
+    Package(float w, float v, const string& c, const string& co, int outAddr, int inAddr, time_t ts = time(0))
+        : weight(w), volume(v), code(c), company(co), outAddress(outAddr), inAddress(inAddr), timestamp(ts) {};
     virtual ~Package() = default;
-    
-    string getCode() const { return code; }
-    
-    void setCode(const string& c) { code = c; }
-    
-    virtual double calculateCost() = 0;
+    virtual string serialize() = 0;
+    virtual void deserialize(string line) = 0;
     virtual void display() const = 0;
-
     friend class PackageManager; 
 };
 
@@ -39,8 +35,10 @@ private:
     string receiverName;
 
 public:
+    IncomingPackage() = default;
     IncomingPackage(float w, float v, const string& rName, const string& rTel);
-    double calculateCost() override;
+    string serialize() override;
+    void deserialize(string line) override;
     void display() const override;
 };
 
@@ -53,8 +51,11 @@ private:
     bool isUrgent;
 
 public:
+    OutgoingPackage() = default;
     OutgoingPackage(float w, float v, const string& sName, const string& rName);
-    double calculateCost() override;
+    double calculateCost();
+    string serialize() override;
+    void deserialize(string line) override;
     void display() const override;
 };
 
@@ -62,8 +63,19 @@ class ContainedPackage : public Package {
 private:
     string ContainerName;
     Container* container;
+public:
+    ContainedPackage() = default;
+    ContainedPackage(float w, float v, const string& cName, Container* c);
+    ~ContainedPackage() = default;
+
+    string serialize() override;
+    void deserialize(string line) override;
+    void display() const override;
 };
 
 class PendingPackage : public Package {
- 
+public:
+    string serialize() override;
+    void deserialize(string line) override;
+    void display() const override;
 };

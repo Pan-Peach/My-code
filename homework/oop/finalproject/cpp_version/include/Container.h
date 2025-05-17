@@ -12,7 +12,6 @@ private:
 public:
     Container()=default;
     Container(int maxCapacity) : MaxCapacity(maxCapacity), CurrentCapacity(0) {}
-    ~Container() override = default;
-
+    ~Container() = default;
     
 };  

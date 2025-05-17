@@ -1,17 +1,28 @@
 #include "../include/User.h"
 #include <iostream>
 
-void Worker::serialize(FILE* file) {
-    fprintf(file, "%s %d %s\n",
-    account.c_str(), id, password.c_str()
-    );
+string Worker::serialize() {
+    string line = account + " " + to_string(id) + " " + password;
+    return line;
 }
-void Worker::deserialize(FILE* file) {
-    
+void Worker::deserialize(string line) {
+    size_t pos = 0;
+    size_t spacePos = line.find(' ');
+
+    account = line.substr(pos, spacePos);
+
+    pos = spacePos + 1;
+    spacePos = line.find(' ', pos);
+    id = stoi(line.substr(pos, spacePos - pos));
+
+    pos = spacePos + 1;
+    password = line.substr(pos);
+
+    return;
 }
 
-void Worker::display() {
+void Worker::display() const {
     cout << "Account: " << account << endl;
     cout << "ID: " << id << endl;
-    cout << "Password: " << password << endl;
+    cout << "Password: " << password << endl<<endl;
 }
