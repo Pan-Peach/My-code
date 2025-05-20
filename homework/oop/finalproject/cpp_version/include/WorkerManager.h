@@ -16,4 +16,20 @@ public:
     void setFilename(const string& filename) override;
     shared_ptr<Worker> getData(int id) override;
 
+    bool findAccount(const string& account) {
+        for (const auto& worker : dataList) {
+            if (worker->getAccount() == account) {
+                return true;
+            }
+        }
+        return false;
+    }
+    bool cmpPassword(const string& account, const string& password) {
+        for (const auto& worker : dataList) {
+            if (worker->getAccount() == account && worker->getPassword() == password) {
+                return true;
+            }
+        }
+        return false;
+    }
 };

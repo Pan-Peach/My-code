@@ -100,10 +100,38 @@ CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/PackageManager.cpp -o CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.s
 
+CMakeFiles/ExpressManager.dir/src/System.cpp.o: CMakeFiles/ExpressManager.dir/flags.make
+CMakeFiles/ExpressManager.dir/src/System.cpp.o: ../src/System.cpp
+CMakeFiles/ExpressManager.dir/src/System.cpp.o: CMakeFiles/ExpressManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ExpressManager.dir/src/System.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ExpressManager.dir/src/System.cpp.o -MF CMakeFiles/ExpressManager.dir/src/System.cpp.o.d -o CMakeFiles/ExpressManager.dir/src/System.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/System.cpp
+
+CMakeFiles/ExpressManager.dir/src/System.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ExpressManager.dir/src/System.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/System.cpp > CMakeFiles/ExpressManager.dir/src/System.cpp.i
+
+CMakeFiles/ExpressManager.dir/src/System.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ExpressManager.dir/src/System.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/System.cpp -o CMakeFiles/ExpressManager.dir/src/System.cpp.s
+
+CMakeFiles/ExpressManager.dir/src/Ui.cpp.o: CMakeFiles/ExpressManager.dir/flags.make
+CMakeFiles/ExpressManager.dir/src/Ui.cpp.o: ../src/Ui.cpp
+CMakeFiles/ExpressManager.dir/src/Ui.cpp.o: CMakeFiles/ExpressManager.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ExpressManager.dir/src/Ui.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ExpressManager.dir/src/Ui.cpp.o -MF CMakeFiles/ExpressManager.dir/src/Ui.cpp.o.d -o CMakeFiles/ExpressManager.dir/src/Ui.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/Ui.cpp
+
+CMakeFiles/ExpressManager.dir/src/Ui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ExpressManager.dir/src/Ui.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/Ui.cpp > CMakeFiles/ExpressManager.dir/src/Ui.cpp.i
+
+CMakeFiles/ExpressManager.dir/src/Ui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ExpressManager.dir/src/Ui.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/Ui.cpp -o CMakeFiles/ExpressManager.dir/src/Ui.cpp.s
+
 CMakeFiles/ExpressManager.dir/src/User.cpp.o: CMakeFiles/ExpressManager.dir/flags.make
 CMakeFiles/ExpressManager.dir/src/User.cpp.o: ../src/User.cpp
 CMakeFiles/ExpressManager.dir/src/User.cpp.o: CMakeFiles/ExpressManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ExpressManager.dir/src/User.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ExpressManager.dir/src/User.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ExpressManager.dir/src/User.cpp.o -MF CMakeFiles/ExpressManager.dir/src/User.cpp.o.d -o CMakeFiles/ExpressManager.dir/src/User.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/User.cpp
 
 CMakeFiles/ExpressManager.dir/src/User.cpp.i: cmake_force
@@ -117,7 +145,7 @@ CMakeFiles/ExpressManager.dir/src/User.cpp.s: cmake_force
 CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o: CMakeFiles/ExpressManager.dir/flags.make
 CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o: ../src/WorkerManager.cpp
 CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o: CMakeFiles/ExpressManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o -MF CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o.d -o CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/WorkerManager.cpp
 
 CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.i: cmake_force
@@ -131,7 +159,7 @@ CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.s: cmake_force
 CMakeFiles/ExpressManager.dir/src/main.cpp.o: CMakeFiles/ExpressManager.dir/flags.make
 CMakeFiles/ExpressManager.dir/src/main.cpp.o: ../src/main.cpp
 CMakeFiles/ExpressManager.dir/src/main.cpp.o: CMakeFiles/ExpressManager.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/ExpressManager.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/ExpressManager.dir/src/main.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ExpressManager.dir/src/main.cpp.o -MF CMakeFiles/ExpressManager.dir/src/main.cpp.o.d -o CMakeFiles/ExpressManager.dir/src/main.cpp.o -c /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/main.cpp
 
 CMakeFiles/ExpressManager.dir/src/main.cpp.i: cmake_force
@@ -146,6 +174,8 @@ CMakeFiles/ExpressManager.dir/src/main.cpp.s: cmake_force
 ExpressManager_OBJECTS = \
 "CMakeFiles/ExpressManager.dir/src/Package.cpp.o" \
 "CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.o" \
+"CMakeFiles/ExpressManager.dir/src/System.cpp.o" \
+"CMakeFiles/ExpressManager.dir/src/Ui.cpp.o" \
 "CMakeFiles/ExpressManager.dir/src/User.cpp.o" \
 "CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o" \
 "CMakeFiles/ExpressManager.dir/src/main.cpp.o"
@@ -155,12 +185,14 @@ ExpressManager_EXTERNAL_OBJECTS =
 
 ExpressManager: CMakeFiles/ExpressManager.dir/src/Package.cpp.o
 ExpressManager: CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.o
+ExpressManager: CMakeFiles/ExpressManager.dir/src/System.cpp.o
+ExpressManager: CMakeFiles/ExpressManager.dir/src/Ui.cpp.o
 ExpressManager: CMakeFiles/ExpressManager.dir/src/User.cpp.o
 ExpressManager: CMakeFiles/ExpressManager.dir/src/WorkerManager.cpp.o
 ExpressManager: CMakeFiles/ExpressManager.dir/src/main.cpp.o
 ExpressManager: CMakeFiles/ExpressManager.dir/build.make
 ExpressManager: CMakeFiles/ExpressManager.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable ExpressManager"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable ExpressManager"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ExpressManager.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

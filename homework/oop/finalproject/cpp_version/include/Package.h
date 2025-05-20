@@ -63,6 +63,7 @@ class ContainedPackage : public Package {
 private:
     string ContainerName;
     Container* container;
+    int OwnerId;
 public:
     ContainedPackage() = default;
     ContainedPackage(float w, float v, const string& cName, Container* c);
@@ -71,6 +72,8 @@ public:
     string serialize() override;
     void deserialize(string line) override;
     void display() const override;
+
+    int getOwnerId() const { return OwnerId; }
 };
 
 class PendingPackage : public Package {

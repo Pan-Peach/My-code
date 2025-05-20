@@ -180,6 +180,54 @@ src/PackageManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/PackageManager.cpp.s
 .PHONY : src/PackageManager.cpp.s
 
+src/System.o: src/System.cpp.o
+.PHONY : src/System.o
+
+# target to build an object file
+src/System.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/System.cpp.o
+.PHONY : src/System.cpp.o
+
+src/System.i: src/System.cpp.i
+.PHONY : src/System.i
+
+# target to preprocess a source file
+src/System.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/System.cpp.i
+.PHONY : src/System.cpp.i
+
+src/System.s: src/System.cpp.s
+.PHONY : src/System.s
+
+# target to generate assembly for a file
+src/System.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/System.cpp.s
+.PHONY : src/System.cpp.s
+
+src/Ui.o: src/Ui.cpp.o
+.PHONY : src/Ui.o
+
+# target to build an object file
+src/Ui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/Ui.cpp.o
+.PHONY : src/Ui.cpp.o
+
+src/Ui.i: src/Ui.cpp.i
+.PHONY : src/Ui.i
+
+# target to preprocess a source file
+src/Ui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/Ui.cpp.i
+.PHONY : src/Ui.cpp.i
+
+src/Ui.s: src/Ui.cpp.s
+.PHONY : src/Ui.s
+
+# target to generate assembly for a file
+src/Ui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ExpressManager.dir/build.make CMakeFiles/ExpressManager.dir/src/Ui.cpp.s
+.PHONY : src/Ui.cpp.s
+
 src/User.o: src/User.cpp.o
 .PHONY : src/User.o
 
@@ -267,6 +315,12 @@ help:
 	@echo "... src/PackageManager.o"
 	@echo "... src/PackageManager.i"
 	@echo "... src/PackageManager.s"
+	@echo "... src/System.o"
+	@echo "... src/System.i"
+	@echo "... src/System.s"
+	@echo "... src/Ui.o"
+	@echo "... src/Ui.i"
+	@echo "... src/Ui.s"
 	@echo "... src/User.o"
 	@echo "... src/User.i"
 	@echo "... src/User.s"

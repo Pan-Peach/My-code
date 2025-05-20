@@ -207,4 +207,6 @@ CMakeFiles/ExpressManager.dir/src/main.cpp.o: \
  /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/../include/WorkerManager.h \
  /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/../include/PackageManager.h \
  /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/../include/CustomerManager.h \
- /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/../include/System.h
+ /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/../include/System.h \
+ /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/../include/Ui.h \
+ /home/panpeach/My-code/homework/oop/finalproject/cpp_version/src/../include/AdminManager.h

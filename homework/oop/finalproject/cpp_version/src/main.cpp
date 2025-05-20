@@ -1,15 +1,14 @@
 #include "../include/ExpressManager.h"
 #include <iostream>
+#include <cstdlib>
+
+#define _linux_
 
 int main(){
-    WorkerManager WorkerManager;
-    string  WorkerFile = "../data/test_worker.txt";
-    WorkerManager.setFilename(WorkerFile);
-    WorkerManager.loadData();
-    WorkerManager.viewAll();
-    Worker test("test", "password");
-    test.setId(WorkerManager.getNextId());
-    WorkerManager.addData(make_shared<Worker>(test));
-    WorkerManager.saveData();
+    string adminFile = "../data/admin_data.txt";
+    string customerFile = "../data/customer_data.txt";
+    string workerFile = "../data/worker_data.txt";
+    System* system = System::getInstance();
+    system->init(adminFile, customerFile, workerFile);
     return 0;
 }
