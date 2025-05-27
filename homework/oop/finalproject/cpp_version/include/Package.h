@@ -64,6 +64,9 @@ private:
     string ContainerName;
     Container* container;
     int OwnerId;
+    string name;
+    string tel;
+    string pickupCode;
 public:
     ContainedPackage() = default;
     ContainedPackage(float w, float v, const string& cName, Container* c);

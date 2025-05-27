@@ -29,7 +29,8 @@ ContainedPackage::ContainedPackage(float w, float v, const string& cName, Contai
 }
 
 string ContainedPackage::serialize(){
-
+string line = to_string(weight) + " " + to_string(volume) + " " + name + " " + tel + " " + ContainerName+pickupCode + " " + to_string(inAddress) + " " + to_string(outAddress) + " " + "unknown" + " " + code + " " + company + " " + to_string(timestamp);
+    return line;
 }
 void ContainedPackage::deserialize(string line){
 
