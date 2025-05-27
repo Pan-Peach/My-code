@@ -1,3 +1,0 @@
-/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles/ExpressManager.dir
-/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles/edit_cache.dir
-/home/panpeach/My-code/homework/oop/finalproject/cpp_version/build/CMakeFiles/rebuild_cache.dir
