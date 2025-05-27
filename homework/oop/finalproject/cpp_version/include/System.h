@@ -29,10 +29,11 @@ private:
     Ui *ui ;
     bool inited = false;
     enum UserType currentUserType;  
+
+public:
     AdminManager adminManager;
     CustomerManager customerManager;
     WorkerManager workerManager;
-public:
     static System* getInstance();
     
     void init(const string& adminFile, const string& customerFile, const string& workerFile);
@@ -48,7 +49,5 @@ public:
     bool registerWorker(const string& account, const string& password);
     bool registerAdmin(const string& account, const string& password);
                      
-    void addPackage(shared_ptr<Package> package);
-    void removePackage(const string& id);
-    shared_ptr<Package> findPackage(const string& id);
+    
 };
