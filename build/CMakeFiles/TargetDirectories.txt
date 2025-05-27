@@ -1,3 +1,3 @@
-G:/code/build/CMakeFiles/HelloWorldExecutable.dir
-G:/code/build/CMakeFiles/ALL_BUILD.dir
-G:/code/build/CMakeFiles/ZERO_CHECK.dir
+/home/panpeach/My-code/build/CMakeFiles/ExpressManager.dir
+/home/panpeach/My-code/build/CMakeFiles/edit_cache.dir
+/home/panpeach/My-code/build/CMakeFiles/rebuild_cache.dir
