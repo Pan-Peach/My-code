@@ -13,12 +13,17 @@ void Admin::deserialize(string line) {
     size_t spacePos = line.find(' ');
 
     account = line.substr(pos, spacePos);
-
+#ifdef DEBUG
+    cout << accout << endl;
+#endif
     pos = spacePos + 1;
     spacePos = line.find(' ', pos);
     password = line.substr(pos, spacePos - pos);
 
     pos = spacePos + 1;
+#ifdef DEBUG
+    cout << line.substr(pos) << endl;
+#endif
     id = stoi(line.substr(pos));
 
 }

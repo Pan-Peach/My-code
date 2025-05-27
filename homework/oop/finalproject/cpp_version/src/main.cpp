@@ -3,6 +3,7 @@
 #include <cstdlib>
 
 #define _linux_
+#define DEBUG
 
 int main(){
     string adminFile = "../data/admin_data.txt";

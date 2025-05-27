@@ -26,4 +26,7 @@ public:
     void displaySearchCustomerMenu();
     void displaySearchManagerMenu();
     void displaySearchUserMenu();
+    void displayWorkerManagementMenu();
+    void displayCustomerManagementMenu();
+    void displayPackageManagementMenu();
 };
