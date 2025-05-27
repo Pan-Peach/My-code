@@ -1,3 +1,0 @@
-/home/panpeach/My-code/build/CMakeFiles/ExpressManager.dir
-/home/panpeach/My-code/build/CMakeFiles/edit_cache.dir
-/home/panpeach/My-code/build/CMakeFiles/rebuild_cache.dir
