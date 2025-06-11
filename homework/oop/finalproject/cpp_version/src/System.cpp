@@ -26,14 +26,16 @@ System* System::getInstance() {
     return instance;
 }
 
-void System::init(const string& adminFile, const string& customerFile, const string& workerFile) {
+void System::init(const string& adminFile, const string& customerFile, const string& workerFile, const string& containedPackageFile) {
     adminManager.setFilename(adminFile);
     customerManager.setFilename(customerFile);
     workerManager.setFilename(workerFile);
+    containedPackageManager.setFilename(containedPackageFile);
 
     adminManager.loadData();
     customerManager.loadData();
     workerManager.loadData();
+    containedPackageManager.loadData();
 
     // Initialize the UI
     inited = true;

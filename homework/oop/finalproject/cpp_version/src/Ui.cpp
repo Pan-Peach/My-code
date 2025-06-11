@@ -162,18 +162,22 @@ void Ui::displayRegisterMenu() {
 void Ui::displayAdminMenu(){
     clearScreen();
     cout << "Admin Menu" << endl;
+    cout<< "1. Worker Management" << endl;
+    cout<< "2. Customer Management" << endl;
+    cout<< "3. Package Management" << endl;
+    cout<< "4. Exit" << endl;
     string choice;
     cin >> choice;
     if (choice == "1") {
         cout<< "Worker Management" << endl;
-        
+        displayWorkerManagementMenu();
     }
     else if (choice == "2") {
         cout<< "Customer Management" << endl;
-
+        displayCustomerManagementMenu();
     } else if (choice == "3") {
         cout<< "Package Management" << endl;
-
+        displayPackageManagementMenu();
     } else if (choice == "4") {
         cout<< "Exit" << endl;
         System::getInstance()->logout();
@@ -316,13 +320,42 @@ void Ui::displayCustomerManagementMenu() {
     cin >> choice;
     
     if (choice == "1") {
-        // Add customer logic
+        string name, account, password, tel;
+        cout << "Enter Name: ";
+        cin >> name;
+        cout << "Enter Account: ";
+        cin >> account;
+        cout << "Enter Password: ";
+        cin >> password;
+        cout << "Enter Telephone: ";
+        cin >> tel;
+        
+        Customer newCustomer(name, account, password, System::getInstance()->customerManager.getNextId(), 0, 0, tel);
+        System::getInstance()->customerManager.addData(make_shared<Customer>(newCustomer));
+        cout << "Customer added successfully." << endl;
     } else if (choice == "2") {
         // Remove customer logic
+        int id;
+        cout<< "Enter Customer ID to remove: ";
+        cin >> id;
+        System::getInstance()->customerManager.removeData(id);
+
     } else if (choice == "3") {
         // View all customers logic
+        System::getInstance()->customerManager.viewAll();
+        pause();
+        displayCustomerManagementMenu();
     } else if (choice == "4") {
         // Find customer logic
+        int id;
+        cout << "Enter Customer ID to find: ";
+        cin >> id;
+        shared_ptr<Customer> customer = System::getInstance()->customerManager.getData(id);
+        if (customer) {
+            customer->display();
+        } else {
+            cout << "Customer not found." << endl;
+        }
     } else if (choice == "5") {
         displayAdminMenu();
     } else {
@@ -347,12 +380,57 @@ void Ui::displayPackageManagementMenu() {
     
     if (choice == "1") {
         // Add package logic
+        string containerName, name, tel, pickupCode, company;
+        float weight, volume;
+        int inAddress, outAddress;
+        int id = System::getInstance()->containedPackageManager.getNextId();
+        time_t timestamp = time(nullptr);
+        cout << "Enter Container Name: ";
+        cin >> containerName;
+        cout << "Enter Package Name: ";
+        cin >> name;
+        cout << "Enter Telephone: ";
+        cin >> tel;
+        cout << "Enter Pickup Code: ";
+        cin >> pickupCode;
+        cout << "Enter Company: ";
+        cin >> company;
+        cout << "Enter Weight: ";
+        cin >> weight;
+        cout << "Enter Volume: ";
+        cin >> volume;
+        cout << "Enter In Address: ";
+        cin >> inAddress;
+        cout << "Enter Out Address: ";
+        cin >> outAddress;
+
+        // Adjust the arguments below to match the actual constructor of ContainedPackage
+        ContainedPackage newPackage(weight, volume, containerName, nullptr, name, tel, pickupCode, company, inAddress, outAddress, timestamp, id);
+        System::getInstance()->containedPackageManager.addData(make_shared<ContainedPackage>(newPackage));
+        cout << "Contained Package added successfully." << endl;
     } else if (choice == "2") {
         // Remove package logic
+        int id;
+        cout << "Enter Contained Package ID to remove: ";
+        cin >> id;
+        System::getInstance()->containedPackageManager.removeData(id);
+        cout << "Contained Package removed successfully." << endl;
     } else if (choice == "3") {
         // View all packages logic
+        System::getInstance()->containedPackageManager.viewAll();
+        pause();
+        displayPackageManagementMenu();
     } else if (choice == "4") {
         // Find package logic
+        int id;
+        cout << "Enter Contained Package ID to find: ";
+        cin >> id;
+        shared_ptr<ContainedPackage> package = System::getInstance()->containedPackageManager.getData(id);
+        if (package) {
+            package->display();
+        } else {
+            cout << "Contained Package not found." << endl;
+        }
     } else if (choice == "5") {
         displayAdminMenu();
     } else {

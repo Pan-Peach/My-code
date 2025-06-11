@@ -31,12 +31,14 @@ private:
     enum UserType currentUserType;  
 
 public:
+    ~System() = default;
     AdminManager adminManager;
     CustomerManager customerManager;
     WorkerManager workerManager;
+    ContainedPackageManager containedPackageManager;
     static System* getInstance();
     
-    void init(const string& adminFile, const string& customerFile, const string& workerFile);
+    void init(const string& adminFile, const string& customerFile, const string& workerFile, const string& containedPackageFile);
 
     void setUserType(UserType type) {
         currentUserType = type;

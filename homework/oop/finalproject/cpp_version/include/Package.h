@@ -69,7 +69,8 @@ private:
     string pickupCode;
 public:
     ContainedPackage() = default;
-    ContainedPackage(float w, float v, const string& cName, Container* c);
+    ContainedPackage(float w, float v, const string& cName, Container* c, const string& name, const string& tel, const string& pickupCode, const string& company, int inAddress, int outAddress, time_t timestamp = time(0), int id = 0)
+        : Package(w, v, "", company, outAddress, inAddress, timestamp), ContainerName(cName), container(c), OwnerId(id), name(name), tel(tel), pickupCode(pickupCode) {};
     ~ContainedPackage() = default;
 
     string serialize() override;

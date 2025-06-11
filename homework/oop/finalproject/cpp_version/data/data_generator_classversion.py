@@ -250,9 +250,9 @@ if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(sys.argv[0])))
     generator = Generate(user_count, ruku_package_count, daishou_package_count,
                          out_package_count, worker_count)
-    # generator.write_user(generator.user, os.path.join("data", user_file))
-    generator.write_ruku_package(generator.ruku_package,
-                                 ruku_package_file)
+    generator.write_user(generator.user, os.path.join(user_file))
+    # generator.write_ruku_package(generator.ruku_package,
+    #                        ruku_package_file)
     # generator.write_out_package(generator.out_package,
     #                             os.path.join("data", out_package_file))
     # generator.write_daishou_package(generator.daishou_package,
