@@ -141,9 +141,10 @@ class Generate:
             id = company + "0" + str(in_address) + str(out_address) + str(
                 random.randint(100, 999))
             time = 1740970266 + random.randint(-10000, 10000)
+            ownerid = random.choice(user)[3]
             ruku_packages.append(
                 (weight, volume, name, shoujianren_tel, code, out_address,
-                 in_address, state, id, company, time, i-1))
+                 in_address, state, id, company, time, i-1, ownerid))
         return ruku_packages
 
     def generate_daishou_package(self, count, user):
@@ -250,9 +251,9 @@ if __name__ == "__main__":
     os.chdir(os.path.dirname(os.path.abspath(sys.argv[0])))
     generator = Generate(user_count, ruku_package_count, daishou_package_count,
                          out_package_count, worker_count)
-    generator.write_user(generator.user, os.path.join(user_file))
-    # generator.write_ruku_package(generator.ruku_package,
-    #                        ruku_package_file)
+    # generator.write_user(generator.user, os.path.join(user_file))
+    generator.write_ruku_package(generator.ruku_package,
+                            ruku_package_file)
     # generator.write_out_package(generator.out_package,
     #                             os.path.join("data", out_package_file))
     # generator.write_daishou_package(generator.daishou_package,

@@ -77,6 +77,7 @@ public:
     void deserialize(string line) override;
     void display() const override;
 
+    void setOwnerId(int id) { OwnerId = id; }
     int getOwnerId() const { return OwnerId; }
 };
 

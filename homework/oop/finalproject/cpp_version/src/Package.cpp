@@ -26,7 +26,7 @@ void OutgoingPackage::display() const {
 
 
 string ContainedPackage::serialize(){
-string line = to_string(weight) + " " + to_string(volume) + " " + name + " " + tel + " " + ContainerName+pickupCode + " " + to_string(inAddress) + " " + to_string(outAddress) + " " + "unknown" + " " + code + " " + company + " " + to_string(timestamp) + " " + to_string(id);
+string line = to_string(weight) + " " + to_string(volume) + " " + name + " " + tel + " " + ContainerName+pickupCode + " " + to_string(inAddress) + " " + to_string(outAddress) + " " + "unknown" + " " + code + " " + company + " " + to_string(timestamp) + " " + to_string(id) + " " + to_string(OwnerId);
     return line;
 }
 void ContainedPackage::deserialize(string line){
@@ -44,9 +44,9 @@ void ContainedPackage::deserialize(string line){
     tel = line.substr(pos, spacepos - pos);
     pos = spacepos + 1;
     spacepos = line.find(' ', pos);
-    ContainerName = line.substr(pos, spacepos - pos);   
-    pos = spacepos + 1;
-    spacepos = line.find(' ', pos);
+    // ContainerName = line.substr(pos, spacepos - pos);   
+    // pos = spacepos + 1;
+    // spacepos = line.find(' ', pos);
     pickupCode = line.substr(pos, spacepos - pos);
     pos = spacepos + 1;
     spacepos = line.find(' ', pos);
@@ -54,6 +54,8 @@ void ContainedPackage::deserialize(string line){
     pos = spacepos + 1;
     spacepos = line.find(' ', pos);
     outAddress = stoi(line.substr(pos, spacepos - pos));
+    pos = spacepos + 1;
+    spacepos = line.find(' ', pos);
     pos = spacepos + 1;
     spacepos = line.find(' ', pos);
     code = line.substr(pos, spacepos - pos);
@@ -66,6 +68,8 @@ void ContainedPackage::deserialize(string line){
     timestamp = static_cast<time_t>(time);
     pos = spacepos + 1;
     id = stoi(line.substr(pos));
+    pos = line.find(' ', pos);
+    OwnerId = stoi(line.substr(pos));
 }
 void ContainedPackage::display() const {
     cout << "Contained Package:" << endl;

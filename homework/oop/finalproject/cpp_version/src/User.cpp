@@ -1,5 +1,6 @@
 #include "../include/User.h"
 #include <iostream>
+#include "../include/Package.h"
 
 
 
@@ -48,7 +49,7 @@ Customer::Customer(const string& name, const string& acc, const string& pwd, con
 }
 
 string Customer::serialize() {
-    string line = name + " " + account + " " + password + " " + to_string(id) + to_string(num_ContainedPackage) + " " + to_string(num_OutgoingPackage) + " " + tel;
+    string line = name + " " + account + " " + password + " " + to_string(id) + " " + to_string(num_ContainedPackage) + " " + to_string(num_OutgoingPackage) + " " + tel;
     return line;
 }
 
@@ -101,6 +102,27 @@ void Customer::CptStarLevel() {
         starLevel = 6 - 5/x;
     }
     return;
+}
+
+void Customer::PickupPackage(int id) {
+    for (auto& package : containedPackage) {
+        if (package->getId() == id) {
+            cout << "Package with ID " << id << " picked up." << endl;
+            return;
+        }
+    }
+    cout << "Package with ID " << id << " not found." << endl;
+}
+
+void Customer::DisplayContainedPackages(){
+    if (containedPackage.empty()) {
+        cout << "No contained packages found." << endl;
+        return;
+    }
+    cout << "Contained Packages:" << endl;
+    for (const auto& package : containedPackage) {
+        package->display();
+    }
 }
 
 string Worker::serialize() {

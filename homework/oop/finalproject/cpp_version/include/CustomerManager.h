@@ -18,13 +18,13 @@ public:
         }
         return false;
     }
-    bool cmpPassword(const string& account, const string& password) {
+    shared_ptr<Customer> cmpPassword(const string& account, const string& password) {
         for (const auto& customer : dataList) {
             if (customer->getAccount() == account && customer->getPassword() == password) {
-                return true;
+                return customer;
             }
         }
-        return false;
+        return nullptr;
     }
 
     friend class ContainedPackageManager;

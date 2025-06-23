@@ -12,4 +12,8 @@ class ContainedPackageManager : public Manager<ContainedPackage> {
 
 public:
     void ContainedPackages(CustomerManager& customerManager);
+
+    list<shared_ptr<ContainedPackage>>& getDataList() {
+        return dataList;
+    }
 };

@@ -17,12 +17,12 @@ public:
        return false;
    }
 
-   bool cmpPassword(const string& account, const string& password) {
+   shared_ptr<Admin> cmpPassword(const string& account, const string& password) {
        for (const auto& admin : dataList) {
            if (admin->getAccount() == account && admin->getPassword() == password) {
-               return true;
+               return admin;
            }
        }
-       return false;
+       return nullptr;
    }
 };

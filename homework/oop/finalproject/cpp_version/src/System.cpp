@@ -37,7 +37,8 @@ void System::init(const string& adminFile, const string& customerFile, const str
     workerManager.loadData();
     containedPackageManager.loadData();
 
-    // Initialize the UI
+    assignOwnerId();
+    ui->clearScreen();
     inited = true;
     ui->displayMainMenu();
 }
@@ -50,6 +51,7 @@ void System::exitSys(){
     adminManager.saveData();
     customerManager.saveData();
     workerManager.saveData();
+    containedPackageManager.saveData();
     cout << "Exiting the system. Goodbye!" << endl;
     delete instance;
     exit(0);
@@ -58,7 +60,8 @@ void System::exitSys(){
 bool System::login(const string& account, const string& password) {
     if(currentUserType == UserType::ADMIN){
         if(adminManager.findAccount(account)){
-            if(adminManager.cmpPassword(account, password)){
+            currentUser = adminManager.cmpPassword(account, password);
+            if(currentUser){                
                 cout << "Admin login successful!" << endl;
                 return true;
             }
@@ -74,7 +77,8 @@ bool System::login(const string& account, const string& password) {
     }
     else if(currentUserType == UserType::CUSTOMER){
         if(customerManager.findAccount(account)){
-            if(customerManager.cmpPassword(account, password)){
+            currentUser = customerManager.cmpPassword(account, password);
+            if(currentUser){
                 cout << "Customer login successful!" << endl;
                 return true;
             }
@@ -90,7 +94,8 @@ bool System::login(const string& account, const string& password) {
     }
     else if(currentUserType == UserType::WORKER){
         if(workerManager.findAccount(account)){
-            if(workerManager.cmpPassword(account, password)){
+            currentUser = workerManager.cmpPassword(account, password);
+            if(currentUser){
                 cout << "Worker login successful!" << endl;
                 return true;
             }
@@ -134,5 +139,17 @@ bool System::registerWorker(const string& account, const string& password) {
         shared_ptr<Worker> newWorker = make_shared<Worker>(account, password, workerManager.getNextId());
         workerManager.addData(newWorker);
         return true;
+    }
+}
+
+void System::assignOwnerId() {
+    for (const auto& package : containedPackageManager.getDataList()) {
+        int ownerId = package->getOwnerId();
+        shared_ptr<Customer> owner = customerManager.getData(ownerId);
+        if (owner) {
+            owner->addContainedPackage(package);
+        } else {
+            cout << "Error: Owner with ID " << ownerId << " not found for package with ID " << package->getId() << "." << endl;
+        }
     }
 }

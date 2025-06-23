@@ -24,12 +24,12 @@ public:
         }
         return false;
     }
-    bool cmpPassword(const string& account, const string& password) {
+    shared_ptr<Worker> cmpPassword(const string& account, const string& password) {
         for (const auto& worker : dataList) {
             if (worker->getAccount() == account && worker->getPassword() == password) {
-                return true;
+                return worker;
             }
         }
-        return false;
+        return nullptr;
     }
 };

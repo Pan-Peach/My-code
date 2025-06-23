@@ -70,6 +70,11 @@ public:
     void PickupPackage(int id) ;
     void SendPackage(int id) ;
     void CptStarLevel();
+    void addContainedPackage(shared_ptr<ContainedPackage> package) {
+        containedPackage.push_back(package);
+        num_ContainedPackage++;
+    }
+    void DisplayContainedPackages() ;
 
     friend class CustomerManager;
     friend class ContainedPackageManager;

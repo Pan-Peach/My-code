@@ -12,5 +12,4 @@ void ContainedPackageManager::ContainedPackages(CustomerManager& customerManager
             cout << "Error: Owner not found for package with ID: " << id << endl;
         }
     }
-
 }

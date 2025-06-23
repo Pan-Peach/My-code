@@ -29,7 +29,7 @@ private:
     Ui *ui ;
     bool inited = false;
     enum UserType currentUserType;  
-
+    shared_ptr<User> currentUser;
 public:
     ~System() = default;
     AdminManager adminManager;
@@ -44,12 +44,17 @@ public:
         currentUserType = type;
     }
 
+    shared_ptr<User> getCurrentUser() const {
+        return currentUser;
+    }
+
     bool login(const string& account, const string& password);
     void logout();
     void exitSys();
     bool registerCustomer(const string& name, const string& account, const string& password, const string& tel);
     bool registerWorker(const string& account, const string& password);
     bool registerAdmin(const string& account, const string& password);
-                     
+    
+    void assignOwnerId();
     
 };
