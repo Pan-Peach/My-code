@@ -26,16 +26,18 @@ System* System::getInstance() {
     return instance;
 }
 
-void System::init(const string& adminFile, const string& customerFile, const string& workerFile, const string& containedPackageFile) {
+void System::init(const string& adminFile, const string& customerFile, const string& workerFile, const string& containedPackageFile, const string& incomingPackageFile) {
     adminManager.setFilename(adminFile);
     customerManager.setFilename(customerFile);
     workerManager.setFilename(workerFile);
     containedPackageManager.setFilename(containedPackageFile);
+    incomingPackageManager.setFilename(incomingPackageFile);
 
     adminManager.loadData();
     customerManager.loadData();
     workerManager.loadData();
     containedPackageManager.loadData();
+    incomingPackageManager.loadData();
 
     assignOwnerId();
     ui->clearScreen();

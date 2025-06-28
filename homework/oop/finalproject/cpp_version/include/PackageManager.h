@@ -8,6 +8,10 @@
 using namespace std;
 
 
+class IncomingPackageManager : public Manager<IncomingPackage> {
+    
+};
+
 class ContainedPackageManager : public Manager<ContainedPackage> {
 
 public:

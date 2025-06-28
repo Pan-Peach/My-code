@@ -36,9 +36,11 @@ public:
     CustomerManager customerManager;
     WorkerManager workerManager;
     ContainedPackageManager containedPackageManager;
+    ContainedPackageManager incomingPackageManager;
     static System* getInstance();
     
-    void init(const string& adminFile, const string& customerFile, const string& workerFile, const string& containedPackageFile);
+    void init(const string& adminFile, const string& customerFile, const string& workerFile, const string& containedPackageFile, const string& incomingPackageFile);
+
 
     void setUserType(UserType type) {
         currentUserType = type;

@@ -114,6 +114,10 @@ void Customer::PickupPackage(int id) {
     cout << "Package with ID " << id << " not found." << endl;
 }
 
+void Customer::SendPackage(int id) {
+
+}
+
 void Customer::DisplayContainedPackages(){
     if (containedPackage.empty()) {
         cout << "No contained packages found." << endl;

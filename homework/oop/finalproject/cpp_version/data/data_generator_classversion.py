@@ -6,7 +6,8 @@ import re
 # 文件路径
 testfile = "testoutput.txt"
 user_file = "user_data.txt"
-ruku_package_file = "contained_package_data.txt"
+#ruku_package_file = "contained_package_data.txt"
+ruku_package_file = "incoming_package_data.txt"
 daishou_package_file = "package_daishou_data.txt"
 out_package_file = "package_out_data.txt"
 worker_file = "worker_data.txt"
@@ -165,15 +166,16 @@ class Generate:
                 if in_address != out_address:
                     break
 
-            state = 0
+
             code = "NULL"
+            ownerid = random.choice(user)[3]
             company = random.choice(self.company_names)
             id = company + "0" + str(in_address) + str(out_address) + str(
                 random.randint(100, 999))
             time = 1740970266 + random.randint(-10000, 10000)
             daishou_packages.append(
                 (weight, volume, name, shoujianren_tel, code, out_address,
-                 in_address, state, id, company, time))
+                 in_address, id, company, time, i, ownerid))
         return daishou_packages
 
     def generate_out_package(self, count, user):
@@ -253,9 +255,9 @@ if __name__ == "__main__":
                          out_package_count, worker_count)
     # generator.write_user(generator.user, os.path.join(user_file))
     generator.write_ruku_package(generator.ruku_package,
-                            ruku_package_file)
+                                  ruku_package_file)
     # generator.write_out_package(generator.out_package,
     #                             os.path.join("data", out_package_file))
     # generator.write_daishou_package(generator.daishou_package,
-    #                                 os.path.join("data", daishou_package_file))
+    #                                 daishou_package_file)
     # generator.write_worker(generator.worker, os.path.join("data", worker_file))

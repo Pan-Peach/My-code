@@ -10,7 +10,8 @@ int main(){
     string customerFile = "../data/customer_data.txt";
     string workerFile = "../data/worker_data.txt";
     string containedPackageFile = "../data/contained_package_data.txt";
+    string incomingPackageFile = "../data/incoming_package_data.txt";
     System* system = System::getInstance();
-    system->init(adminFile, customerFile, workerFile, containedPackageFile);
+    system->init(adminFile, customerFile, workerFile, containedPackageFile, incomingPackageFile);
     return 0;
 }

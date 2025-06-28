@@ -44,7 +44,7 @@ void Ui::displayMainMenu() {
     } else if (choice == "3") {
         cout << "Exiting the system. Goodbye!" << endl;
         pause();
-        System::getInstance()->exitSys();
+        exit(0);
     } else {
         cout << "Invalid choice. Please try again." << endl;
         pause();
@@ -134,6 +134,15 @@ void Ui::displayRegisterMenu() {
         cin >> password;
         cout << "Enter Telephone: ";
         cin >> tel;
+        if(System::getInstance()->registerCustomer(name, account, password, tel)){
+            cout << "Customer registered successfully!" << endl;
+            pause();
+            displayMainMenu();
+        } else {
+            cout << "Registration failed. Please try again." << endl;
+            pause();
+            displayRegisterMenu();
+        }
 
     } else if (choice == "2") {
         string account, password;
@@ -194,10 +203,8 @@ void Ui::displayCustomerMenu(){
     cout << "Customer Menu" << endl;
     cout << "1. View Contained Packages" << endl;
     cout << "2. Pick Up Package" << endl;
-    cout << "3. Proxy Pick Up" << endl;
-    cout << "4. Send Package" << endl;
-    cout << "5. View My Sent Packages" << endl;
-    cout << "6. Logout" << endl;
+    cout << "3. Send Package" << endl;
+    cout << "4. Logout" << endl;
     cout << "Please select an option: ";
     string choice;
     cin >> choice;
@@ -216,19 +223,22 @@ void Ui::displayCustomerMenu(){
         Customer* curCustomer = dynamic_cast<Customer*>(System::getInstance()->getCurrentUser().get());
         curCustomer->PickupPackage(id);
         System::getInstance()->containedPackageManager.removeData(id);
-
+        pause();
+        displayCustomerMenu();
     }
     else if (choice == "3") {
-        cout<< "Proxy pick up" << endl;
-
-    }
-    else if (choice == "4") {
         cout<< "Send package" << endl;
+        int id;
+        cout<< "Enter Package ID to send: ";
+        cin >> id;
+        Customer* curCustomer = dynamic_cast<Customer*>(System::getInstance()->getCurrentUser().get());
+        curCustomer->SendPackage(id);
+        System::getInstance()->containedPackageManager.removeData(id);
+        cout << "Package with ID " << id << " sent successfully." << endl;
+        pause();
+        displayCustomerMenu();
 
-    } else if (choice == "5") {
-        cout<< "View my sent packages" << endl;
-
-    } else if (choice == "6") {
+    } else if (choice == "4") {
         System::getInstance()->logout();
         displayMainMenu();
     } else {
@@ -241,28 +251,45 @@ void Ui::displayCustomerMenu(){
 void Ui::displayWorkerMenu(){
     clearScreen();
     cout << "Worker Menu" << endl;
+    cout << "1. Store Package" << endl;
+    cout << "2. Search Package" << endl;
+    cout << "3. View Incoming Package" << endl;
+    cout << "4. Logout" << endl;
     string choice;
     cin >> choice;
     if (choice == "1") {
-        cout<< "Receive package" << endl;
-
+        cout<< "Store package" << endl;
+        cout<< "Enter Package ID to store: ";
+        int id;
+        cin >> id;
+        shared_ptr<ContainedPackage> package = System::getInstance()->incomingPackageManager.getData(id);
+        if (package) {
+            System::getInstance()->containedPackageManager.addData(package);
+            System::getInstance()->incomingPackageManager.removeData(id);
+            cout << "Package with ID " << id << " stored successfully." << endl;
+        } else {
+            cout << "Package with ID " << id << " not found." << endl;
+        }
+        pause();
+        displayWorkerMenu();
     }
     else if (choice == "2") {
-        cout<< "Store package" << endl;
-
-    }
-    else if (choice == "3") {
         cout<< "Search package" << endl;
-
+        int id;
+        cout << "Enter Package ID to search: ";
+        cin >> id;
+        System::getInstance()->incomingPackageManager.getData(id)->display();
+        pause();
+        displayWorkerMenu();
     }
-    else if (choice == "4") {
-        cout<< "Check remaining space" << endl;
 
-    }
-    else if (choice == "5") {
-        cout<< "Send package" << endl;
+    else if (choice == "3") {
+        cout<< "View Incoming package" << endl;
+        System::getInstance()->incomingPackageManager.viewAll();
+        pause();
+        displayWorkerMenu();
 
-    } else if (choice == "6") {
+    } else if (choice == "4") {
         System::getInstance()->logout();
         displayMainMenu();
     } else {
