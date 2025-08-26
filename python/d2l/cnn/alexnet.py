@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 def get_numworkers():
     return 4
 
-def load_data(path,batch_size=128,device='cpu'):
+def load_data(path,batch_size=128):
     trans = transforms.Compose([
         transforms.ToTensor(),
         # transforms.Resize((224, 224)),
