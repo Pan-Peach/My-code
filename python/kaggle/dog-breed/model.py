@@ -296,6 +296,34 @@ def train_model(model, train_loader, val_loader, optimizer, criterion, num_epoch
     plot_training_history(history)
     return history, best_model_path
 
+def get_pretrained_model(num_classes=120):
+    model = nn.Sequential()
+    model.features = models.resnet34(pretrained=True)
+    model.output = nn.Sequential(
+        nn.Linear(1000, 256),
+        nn.ReLU(),
+        nn.Linear(256, num_classes)
+    )
+    model.to(torch.device("cuda" if torch.cuda.is_available() else "cpu"))
+    for param in model.features.parameters():
+        param.requires_grad = False
+    return model
+
+def predict(model, data_loader, device, file_path):
+
+    model.eval()
+    all_predictions = []
+    df = pd.read_csv(os.path.join(file_path, 'test.csv'))
+    with torch.no_grad():
+        for images, _ in data_loader:
+            images = images.to(device)
+            outputs = model(images)
+            probs = nn.Softmax(dim=1)(outputs).cpu().numpy()
+            all_predictions.append(probs)
+            
+
+    return 
+
 if __name__ == "__main__":
     torch.cuda.empty_cache()
     os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -303,17 +331,19 @@ if __name__ == "__main__":
     train_iter, val_iter, test_iter = load_data(file_path, batch_size=64)
     print("Data Loaded")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model = ResNet(ResidualBlock, [2,3,4,6], num_classes=120)
-    model.to(device)
-    offical_model = models.resnet18().to(device)
-    offical_model.fc = nn.Linear(512, 120).to(device)
+    # model = ResNet(ResidualBlock, [2,3,4,6], num_classes=120)
+    # model.to(device)
+    # offical_model = models.resnet18().to(device)
+    # offical_model.fc = nn.Linear(512, 120).to(device)
     # x = torch.randn(1, 3, 224, 224)
     # y = model(x)
     # print(y.shape)  # 应该输出 torch.Size([1, 120])
-    optimizer = torch.optim.SGD(offical_model.parameters(), lr=0.01, momentum=0.9, weight_decay=1e-4)
+    offical_model = get_pretrained_model(num_classes=120)
+    offical_model.to(device)
+    optimizer = torch.optim.SGD(offical_model.output.parameters(), lr=0.01, momentum=0.9, weight_decay=1e-4)
     scheduler = torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)
     criterion = nn.CrossEntropyLoss()
-    num_epochs = 100
+    num_epochs = 10
 
     # x = torch.randn(1, 3, 224, 224).to(device)
     # y = model(x)
