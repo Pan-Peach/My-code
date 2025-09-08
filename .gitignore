@@ -2,3 +2,7 @@
 build/
 data/
 *.pth
+/cpp/luogu/*.exe
+/cpp/luogu/*
+!/cpp/luogu/*.cpp
+!/cpp/luogu/*.h
