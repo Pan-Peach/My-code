@@ -2,6 +2,7 @@
 build/
 data/
 *.pth
+*.pt
 /cpp/luogu/*.exe
 /cpp/luogu/*
 !/cpp/luogu/*.cpp
