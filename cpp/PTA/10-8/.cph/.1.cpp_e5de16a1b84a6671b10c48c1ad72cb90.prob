@@ -1,0 +1,1 @@
+{"name":"Local: 1","url":"/run/media/panpeach/Data/Files/My-code/cpp/PTA/10-8/1.cpp","tests":[{"id":1759911873897,"input":"5\n1 2 3 4 5\n5\n0 2 8\n0 9 6\n0 0 7\n1 0 \n1 6\n","output":"7 1 2 8 3 5 \n"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/run/media/panpeach/Data/Files/My-code/cpp/PTA/10-8/1.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: C","url":"/mnt/D/Files/My-code/cpp/PTA/12-4/C.cpp","tests":[{"id":1764828780467,"input":"7 10\n60 10 35 55 40 70 70\n0 1 20\n0 4 75\n0 3 45\n1 3 50\n1 2 15\n2 6 5\n5 6 45\n4 5 5\n3 5 25\n3 6 65\n","output":"120"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/D/Files/My-code/cpp/PTA/12-4/C.cpp","group":"local","local":true}

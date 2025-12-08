@@ -1,0 +1,1 @@
+{"name":"Local: B","url":"/mnt/D/Files/My-code/cpp/PTA/10-30/B.cpp","tests":[{"id":1761806523881,"input":"1 5 8 0 0 0 6 0 0\n3\n8\n1\n6","output":"5\n0\n1"},{"id":1761808971602,"input":"1 5 8 0 0 0 6 0 0\n1\n100","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/D/Files/My-code/cpp/PTA/10-30/B.cpp","group":"local","local":true}

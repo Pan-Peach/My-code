@@ -1,0 +1,1 @@
+{"name":"Local: 3","url":"/mnt/D/Files/My-code/cpp/PTA/volunteer/3.cpp","tests":[{"id":1761268455946,"input":"8\n1 0 1 1 0 1 0 0","output":"1"},{"id":1761268466185,"input":"8\n1 0 0 1 0 1 1 0","output":"0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/D/Files/My-code/cpp/PTA/volunteer/3.cpp","group":"local","local":true}

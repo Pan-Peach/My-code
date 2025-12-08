@@ -14,7 +14,7 @@ class Friend{
     }
 };
 
-ll main(){
+int main(){
     int n,x;
     vector<Friend> f;
     cin>>n>>x;

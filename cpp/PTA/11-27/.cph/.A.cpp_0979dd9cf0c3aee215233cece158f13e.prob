@@ -1,0 +1,1 @@
+{"name":"Local: A","url":"/mnt/D/Files/My-code/cpp/PTA/11-27/A.cpp","tests":[{"id":1764222204776,"input":"3 2\n0 1\n1 2","output":"0 1 2 "},{"id":1764222277337,"input":"3 3\n0 1\n1 2\n2 0","output":"unworkable project"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/mnt/D/Files/My-code/cpp/PTA/11-27/A.cpp","group":"local","local":true}
